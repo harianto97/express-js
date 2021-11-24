@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -15,7 +16,4 @@ app.get('/about', (req,res)=>{
 })
 
 
-
-
-
-app.listen(3000, () => console.log('Server Berjalan pada : http://localhost:3000'));
+app.listen(port, () => console.log(`Server berjalan pada port ${port}`));
